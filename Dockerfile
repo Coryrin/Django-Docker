@@ -12,3 +12,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends gcc
 COPY . /code/
 
 RUN pipenv install --system
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:800"]
