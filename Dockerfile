@@ -13,4 +13,4 @@ COPY . /code/
 
 RUN pipenv install --system
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:800"]
+CMD python manage.py runserver 0.0.0.0:$PORT
