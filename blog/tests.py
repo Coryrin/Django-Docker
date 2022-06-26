@@ -10,4 +10,5 @@ class BlogPostTestCase(TestCase):
 
         title = post.get_title()
 
-        self.assertTrue(title, 'Hello, world')
+        # should fail - GitHub actions should tell me I've been naughty
+        self.assertTrue(title, 'Hello')
