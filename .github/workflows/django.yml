@@ -32,4 +32,4 @@ jobs:
     #     pip install pipenv
     #     pipenv install --system
     - name: Run Tests
-      run: docker-compose -f docker-compose.ci.yml run test
+      run: docker-compose up -d -f docker-compose.ci.yml
