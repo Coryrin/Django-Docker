@@ -10,8 +10,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      COMPOSE_FILE: ./docker-compose.yml
     strategy:
       max-parallel: 4
       matrix:
@@ -34,4 +32,4 @@ jobs:
     #     pip install pipenv
     #     pipenv install --system
     - name: Run Tests
-      run: docker-compose run test
+      run: docker-compose -f docker-compose.ci.yml run test
